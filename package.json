@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "setup": "node scripts/setup.js",
-    "quick-setup": "node scripts/quick-setup.js"
+    "quick-setup": "node scripts/quick-setup.js",
+    "deploy-checklist": "node scripts/deploy-checklist.js"
   },
   "dependencies": {
     "next": "14.0.0",
