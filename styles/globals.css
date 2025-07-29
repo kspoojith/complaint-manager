@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 240, 240, 240;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Form styles */
+.form-input {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900 bg-white;
+}
+
+.form-select {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900 bg-white;
+}
+
+.form-textarea {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-y text-gray-900 bg-white;
+}
+
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200;
+}
+
+.btn-secondary {
+  @apply bg-gray-600 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200;
+}
+
+.btn-danger {
+  @apply bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200;
+}
+
+.btn-success {
+  @apply bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200;
+}
+
+/* Status badges */
+.status-pending {
+  @apply bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.status-in-progress {
+  @apply bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.status-resolved {
+  @apply bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+/* Priority badges */
+.priority-low {
+  @apply bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.priority-medium {
+  @apply bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.priority-high {
+  @apply bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white rounded-lg shadow-md p-6;
+}
+
+.card-header {
+  @apply border-b border-gray-200 pb-4 mb-4;
+}
+
+.card-title {
+  @apply text-xl font-semibold text-gray-900;
+}
+
+/* Table styles */
+.table-container {
+  @apply overflow-x-auto shadow-md rounded-lg;
+}
+
+.table {
+  @apply min-w-full divide-y divide-gray-200;
+}
+
+.table-header {
+  @apply bg-gray-50;
+}
+
+.table-header-cell {
+  @apply px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+}
+
+.table-body {
+  @apply bg-white divide-y divide-gray-200;
+}
+
+.table-row {
+  @apply hover:bg-gray-50 transition-colors duration-200;
+}
+
+.table-cell {
+  @apply px-6 py-4 whitespace-nowrap text-sm text-gray-900;
+}
+
+/* Modal styles */
+.modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50;
+}
+
+.modal-content {
+  @apply bg-white rounded-lg shadow-xl max-w-md w-full mx-4 max-h-[90vh] overflow-y-auto;
+}
+
+.modal-header {
+  @apply flex items-center justify-between p-6 border-b border-gray-200;
+}
+
+.modal-title {
+  @apply text-lg font-semibold text-gray-900;
+}
+
+.modal-body {
+  @apply p-6;
+}
+
+.modal-footer {
+  @apply flex items-center justify-end space-x-3 p-6 border-t border-gray-200;
+}
